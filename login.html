@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Instagram</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #fafafa;
+      }
+      .login-container {
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        border-radius: 1px;
+        margin: 0 auto;
+        padding: 40px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .login-container img {
+        margin-bottom: 20px;
+      }
+      .login-container input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+        background-color: #fafafa;
+      }
+      .login-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #0095f6;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .login-container button:disabled {
+        background-color: #b2dffc;
+        cursor: not-allowed;
+      }
+      .error-message {
+        color: #ed4956;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+      .signup-link {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      .signup-link a {
+        color: #0095f6;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <img
+        alt="Instagram"
+        src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+        srcset="
+          https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png 2x
+        "
+      />
+      <div id="error-message" class="error-message"></div>
+      <input type="text" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="login-btn">Log In</button>
+      <div class="signup-link">
+        Don't have an account? <a href="#" id="signup-toggle">Sign up</a>
+      </div>
+      <button id="signup-btn" style="display: none; margin-top: 10px;">Sign Up</button>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
